@@ -11,13 +11,15 @@ using Microsoft.Xna.Framework.Media;
 
 namespace LunarLander3D2
 {
-    /// <summary>
-    /// This is the main type for your game
-    /// </summary>
+
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+
+        BasicEffect texture;
+
+        Model Modelo;
 
         public Game1()
         {
@@ -25,67 +27,73 @@ namespace LunarLander3D2
             Content.RootDirectory = "Content";
         }
 
-        /// <summary>
-        /// Allows the game to perform any initialization it needs to before starting to run.
-        /// This is where it can query for any required services and load any non-graphic
-        /// related content.  Calling base.Initialize will enumerate through any components
-        /// and initialize them as well.
-        /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
 
             base.Initialize();
+
         }
 
-        /// <summary>
-        /// LoadContent will be called once per game and is the place to load
-        /// all of your content.
-        /// </summary>
         protected override void LoadContent()
         {
-            // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            texture = new BasicEffect(GraphicsDevice);
+            Modelo = Content.Load<Model>("Modelos/box");
 
-            // TODO: use this.Content to load your game content here
+            texture.View = Matrix.CreateLookAt(
+            new Vector3(0, 3, 1),
+            new Vector3(0, 0, 0),
+            Vector3.Up);
+
+            //Matriz de projeção
+            texture.Projection = Matrix.CreatePerspectiveFieldOfView(
+            MathHelper.PiOver4,// campo de visao
+            GraphicsDevice.Viewport.AspectRatio, // aspecto da tela 3x4 , 16/9
+            0.1f, // plano mais proximo
+            100.0f); // plano mais distante
+            Vector3 pos = new Vector3(-1, -1, 0);
         }
 
-        /// <summary>
-        /// UnloadContent will be called once per game and is the place to unload
-        /// all content.
-        /// </summary>
         protected override void UnloadContent()
         {
-            // TODO: Unload any non ContentManager content here
         }
 
-        /// <summary>
-        /// Allows the game to run logic such as updating the world,
-        /// checking for collisions, gathering input, and playing audio.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            // TODO: Add your update logic here
+            if (Keyboard.GetState().IsKeyDown(Keys.Escape))
+            {
+                Exit();
+            }
+
 
             base.Update(gameTime);
         }
 
-        /// <summary>
-        /// This is called when the game should draw itself.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
+        private void DrawModel(Model m, Matrix world, BasicEffect be)
+        {
+            foreach (ModelMesh mm in m.Meshes)
+            {
+                foreach (ModelMeshPart mmp in mm.MeshParts)
+                {
+                    be.World = world;
+                    GraphicsDevice.SetVertexBuffer(mmp.VertexBuffer, mmp.VertexOffset);
+                    GraphicsDevice.Indices = mmp.IndexBuffer;
+                    be.CurrentTechnique.Passes[0].Apply();
+                    GraphicsDevice.DrawIndexedPrimitives(
+                        PrimitiveType.TriangleList, 0, 0,
+                        mmp.NumVertices, mmp.StartIndex, mmp.PrimitiveCount);
+                }
+            }
+        }
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            Modelo.Draw(texture.World, texture.View, texture.Projection);
 
-            base.Draw(gameTime);
         }
     }
 }
