@@ -1,0 +1,42 @@
+EXERCÍCIOS DE PROGRAMAÇÃO (FOCO EM 3D MAS NÃO APENAS)
+
+"SÓ SE APRENDE FAZENDO" <- EMAIL DE ALUNO ANÔNIMO ;-)
+
+VIMOS ATÉ AQUI MUITOS CONCEITOS 2D (COMO VAI O JOGO DE VCS?) E ALGUNS CONCEITOS 3D...
+
+TEMOS QUE COMEÇAR A PENSAR EM NOSSO PROJETO 3D... JÁ TEMOS CONDIÇÕES DE INICIÁ-LO!
+
+QUE PRECISAMOS?
+
+GRUPOS E O PROJETO "LUNAR LANDER 3D":
+
+1- fluxo de tela com vídeo de intro e demais finalizações -> Cabeludo
+2- skybox -> Saulo
+3- mapa de altura (bump) -> Wesley
+4- física (gravidade e colisão) -> Saulo
+5- mapa (outra câmera em outra viewport) -> Gleyson
+6- interface / controles (joypad, touch?) -> Wesley
+7- partículas (jato da nave) -> Gleyson
+
+gleyson - saulo, weslley, "cabeludo", roberto
+
+marcos - silvio, fabio, wagner, reiser
+
+1- Documentação com todo o necessário para implementar: quem, o quê, quando.
+
+2- Hoje, EXERCÍCIOS (todos devem fazer): Um fluxo de telas que me passe um vídeo de introdução, pule o vídeo com esc, caia numa tela com um objeto em 3d (caixa), a câmera está acima desta caixa e a "persegue", tenho um "chão" onde a caixa anda, e tenho uma interface/hud mostrando algo.
+
+3- Este será o início do nosso projeto, logo, deve estar no google code compartilhado com todos e comigo.
+
+
+
+
+
+
+
+
+
+
+
+
+
