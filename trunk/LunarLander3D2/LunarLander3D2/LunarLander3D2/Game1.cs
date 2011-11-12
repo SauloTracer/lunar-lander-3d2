@@ -17,6 +17,15 @@ namespace LunarLander3D2
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        enum Telas {Inicial, InVideo, Menu, Jogo};
+
+        Telas telaAtual = Telas.Inicial;
+
+        Texture2D texturaTela;
+        Video videoInicial;
+        VideoPlayer videoPlay;
+        KeyboardState keyboardState, previousState;
+
         BasicEffect texture;
 
         Model Modelo;
@@ -24,6 +33,8 @@ namespace LunarLander3D2
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+            graphics.PreferredBackBufferHeight = 600;
+            graphics.PreferredBackBufferWidth = 800;
             Content.RootDirectory = "Content";
         }
 
@@ -38,7 +49,9 @@ namespace LunarLander3D2
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
             texture = new BasicEffect(GraphicsDevice);
+            videoPlay = new VideoPlayer();
             Modelo = Content.Load<Model>("Modelos/box");
+            texturaTela = Content.Load<Texture2D>("Telas/TelaInicial");
 
             texture.View = Matrix.CreateLookAt(
             new Vector3(0, 3, 1),
@@ -60,6 +73,7 @@ namespace LunarLander3D2
 
         protected override void Update(GameTime gameTime)
         {
+            keyboardState = Keyboard.GetState();
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
@@ -68,7 +82,35 @@ namespace LunarLander3D2
                 Exit();
             }
 
+            if ((keyboardState.IsKeyDown(Keys.Enter)) && (previousState.IsKeyUp(Keys.Enter)))
+            {
+                #region SwitchTelas
 
+                switch (telaAtual)
+                {
+                    case Telas.Inicial:
+                        {
+                            telaAtual = Telas.InVideo;
+                            videoInicial = Content.Load<Video>("Telas/videoInicial");
+                            break;
+                        }
+                        
+                    case Telas.InVideo:
+                        {
+                            telaAtual = Telas.Menu;
+                            texturaTela = Content.Load<Texture2D>("Telas/TelaMenu");
+                            break;
+                        }
+                    case Telas.Menu:
+                        {
+                            telaAtual = Telas.Jogo;
+                            break;
+                        }
+                }
+                #endregion
+            }
+
+            previousState = keyboardState;
             base.Update(gameTime);
         }
 
@@ -91,8 +133,21 @@ namespace LunarLander3D2
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+            spriteBatch.Begin();
+            if (telaAtual == Telas.Inicial || telaAtual == Telas.Menu)
+            {
+                spriteBatch.Draw(texturaTela, Vector2.Zero, Color.White);
+            }
 
-            Modelo.Draw(texture.World, texture.View, texture.Projection);
+            if (telaAtual == Telas.InVideo)
+            {
+                videoPlay.Play(videoInicial);
+            }
+            else
+            {
+                Modelo.Draw(texture.World, texture.View, texture.Projection);
+            }
+            spriteBatch.End();
 
         }
     }
