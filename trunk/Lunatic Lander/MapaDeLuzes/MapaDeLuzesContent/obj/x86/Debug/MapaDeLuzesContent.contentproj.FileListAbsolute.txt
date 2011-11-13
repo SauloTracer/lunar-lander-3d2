@@ -1,0 +1,3 @@
+C:\Users\devs173a\Documents\Visual Studio 2010\Projects\MapaDeLuzes\MapaDeLuzes\MapaDeLuzesContent\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\MapaDeLuzes\MapaDeLuzes\MapaDeLuzesContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\devs173a\Desktop\MapaDeLuzes\MapaDeLuzes\MapaDeLuzesContent\obj\x86\Debug\ResolveAssemblyReference.cache
