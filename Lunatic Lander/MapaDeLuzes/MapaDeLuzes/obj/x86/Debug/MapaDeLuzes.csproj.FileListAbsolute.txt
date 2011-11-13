@@ -1,0 +1,39 @@
+C:\Users\devs173a\Documents\Visual Studio 2010\Projects\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\MapaDeLuzes.exe
+C:\Users\devs173a\Documents\Visual Studio 2010\Projects\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\MapaDeLuzes.pdb
+C:\Users\devs173a\Documents\Visual Studio 2010\Projects\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\devs173a\Documents\Visual Studio 2010\Projects\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\devs173a\Documents\Visual Studio 2010\Projects\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\obj\x86\Debug\MapaDeLuzes.exe
+C:\Users\devs173a\Documents\Visual Studio 2010\Projects\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\obj\x86\Debug\MapaDeLuzes.pdb
+C:\Users\devs173a\Documents\Visual Studio 2010\Projects\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\caixa.xnb
+C:\Users\devs173a\Documents\Visual Studio 2010\Projects\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\chao.xnb
+C:\Users\devs173a\Documents\Visual Studio 2010\Projects\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\mapadeluzes.xnb
+C:\Users\devs173a\Documents\Visual Studio 2010\Projects\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\plano.xnb
+C:\Users\devs173a\Documents\Visual Studio 2010\Projects\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\video.xnb
+C:\Users\devs173a\Documents\Visual Studio 2010\Projects\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\video.wmv
+D:\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\obj\x86\Debug\MapaDeLuzes.exe
+D:\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\obj\x86\Debug\MapaDeLuzes.pdb
+D:\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\caixa.xnb
+D:\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\plano.xnb
+D:\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\chao.xnb
+D:\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\mapadeluzes.xnb
+D:\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\video.xnb
+D:\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\video.wmv
+D:\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\MapaDeLuzes.exe
+D:\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\MapaDeLuzes.pdb
+C:\Users\devs173a\Desktop\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\caixa.xnb
+C:\Users\devs173a\Desktop\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\plano.xnb
+C:\Users\devs173a\Desktop\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\chao.xnb
+C:\Users\devs173a\Desktop\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\mapadeluzes.xnb
+C:\Users\devs173a\Desktop\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\video.xnb
+C:\Users\devs173a\Desktop\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\video.wmv
+C:\Users\devs173a\Desktop\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\MapaDeLuzes.exe
+C:\Users\devs173a\Desktop\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\MapaDeLuzes.pdb
+C:\Users\devs173a\Desktop\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\devs173a\Desktop\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\devs173a\Desktop\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\obj\x86\Debug\MapaDeLuzes.exe
+C:\Users\devs173a\Desktop\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\obj\x86\Debug\MapaDeLuzes.pdb
+C:\Users\devs173a\Desktop\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\moonGround.xnb
+C:\Users\devs173a\Desktop\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\quadrado.xnb
+C:\Users\devs173a\Desktop\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\Lua.xnb
