@@ -19,11 +19,13 @@ namespace MapaDeLuzes
         KeyboardState teclado;
 
         DualTextureEffect efeitoDuplo;
-        Texture2D textura, quadrado, lua;
+        Texture2D textura, quadrado;
         Model plano, caixa;
 
         Vector3 posMundo, posCamera, posCaixa, posCamera2;
         Matrix view, projection, world;
+
+        float gravidade, aceleracao;
 
         public Game1()
         {
@@ -44,20 +46,14 @@ namespace MapaDeLuzes
             efeitoDuplo = new DualTextureEffect(GraphicsDevice);
             
             plano = Content.Load<Model>("plano");
-            caixa = Content.Load<Model>("box");
+            caixa = Content.Load<Model>("modulo1");
             textura = Content.Load<Texture2D>("moonGround");
             quadrado = Content.Load<Texture2D>("quadrado");
-            lua = Content.Load<Texture2D>("lua");
             
             efeitoDuplo.Texture = textura;
             efeitoDuplo.Texture2 = quadrado;
 
-            (caixa.Meshes[0].Effects[0] as BasicEffect).TextureEnabled = true;
-            (caixa.Meshes[0].Effects[0] as BasicEffect).Texture = lua;
-
             GraphicsDevice.Clear(Color.Black);
-
-            
 
             projection = Matrix.CreatePerspectiveFieldOfView(
                 MathHelper.PiOver4 / 2,// abertura '45o.'
@@ -75,6 +71,9 @@ namespace MapaDeLuzes
             atualizaCamera();
 
             world = Matrix.CreateTranslation(posMundo);
+
+            aceleracao =0.01f;
+            gravidade = 0.01f;
         }
 
         public void atualizaCamera()
@@ -84,7 +83,7 @@ namespace MapaDeLuzes
                 posCamera2,//apontamento = Vector3.Zero
                 Vector3.Up);//'cima' = new Vector3(0,1,0))
 
-            posCamera = new Vector3(posCaixa.X, posCaixa.Y + 1.5f, posCaixa.Z + 10);
+            posCamera = new Vector3(posCaixa.X, posCaixa.Y + 15.5f, posCaixa.Z + 30);
             posCamera2 = posCaixa;
         }
 
@@ -100,49 +99,54 @@ namespace MapaDeLuzes
                 this.Exit();
 
             teclado = Keyboard.GetState();
+            
+            posCaixa.Y += aceleracao;
+
             #region TecladoInput
+
             if (teclado.IsKeyDown(Keys.Escape)) this.Exit();
+                       
             if (teclado.IsKeyDown(Keys.W))
             {
-                posCaixa.Y += 0.01f;
-
+                aceleracao *= 1.01f;
             }
-            if (teclado.IsKeyDown(Keys.S))
-            {
-                posCaixa.Y -= 0.01f;
 
-            }
             if (teclado.IsKeyDown(Keys.A))
             {
-                posCaixa.X -= 0.01f;
-
+                posCaixa.X -= aceleracao;
             }
+
             if (teclado.IsKeyDown(Keys.D))
             {
-                posCaixa.X += 0.01f;
+                posCaixa.X += aceleracao;
 
             }
 
             if (teclado.IsKeyDown(Keys.Left))
             {
-                //(caixa.Meshes[0].Effects[0] as BasicEffect).World *= Matrix.CreateRotationX(0.01f);
                 world *= Matrix.CreateRotationY(0.01f);        
             }
             if (teclado.IsKeyDown(Keys.Right))
             {
-                //(caixa.Meshes[0].Effects[0] as BasicEffect).World *= Matrix.CreateRotationX(0.01f);
                 world *= Matrix.CreateRotationY(-0.01f);
             }
             if (teclado.IsKeyDown(Keys.Up))
             {
-                //(caixa.Meshes[0].Effects[0] as BasicEffect).World *= Matrix.CreateRotationX(0.01f);
-                world *= Matrix.CreateRotationX(0.01f);
+                posCaixa.Z -= aceleracao;
             }
             if (teclado.IsKeyDown(Keys.Down))
             {
-                //(caixa.Meshes[0].Effects[0] as BasicEffect).World *= Matrix.CreateRotationX(0.01f);
-                world *= Matrix.CreateRotationX(-0.01f);
+                posCaixa.Z += aceleracao;
             }
+            #endregion
+
+
+            #region contato com o chão
+                 if ((posCaixa.Y > 0) && (teclado.IsKeyUp(Keys.W))) 
+                    {
+                        gravidade *= 1.01f;
+                        posCaixa.Y -= gravidade;
+                    }
             #endregion
 
             atualizaCamera();
