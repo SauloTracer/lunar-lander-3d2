@@ -44,7 +44,7 @@ namespace MapaDeLuzes
             efeitoDuplo = new DualTextureEffect(GraphicsDevice);
             
             plano = Content.Load<Model>("plano");
-            caixa = Content.Load<Model>("caixa");
+            caixa = Content.Load<Model>("box");
             textura = Content.Load<Texture2D>("moonGround");
             quadrado = Content.Load<Texture2D>("quadrado");
             lua = Content.Load<Texture2D>("lua");
@@ -100,7 +100,7 @@ namespace MapaDeLuzes
                 this.Exit();
 
             teclado = Keyboard.GetState();
-
+            #region TecladoInput
             if (teclado.IsKeyDown(Keys.Escape)) this.Exit();
             if (teclado.IsKeyDown(Keys.W))
             {
@@ -127,10 +127,23 @@ namespace MapaDeLuzes
             {
                 //(caixa.Meshes[0].Effects[0] as BasicEffect).World *= Matrix.CreateRotationX(0.01f);
                 world *= Matrix.CreateRotationY(0.01f);        
-              
             }
-
-            
+            if (teclado.IsKeyDown(Keys.Right))
+            {
+                //(caixa.Meshes[0].Effects[0] as BasicEffect).World *= Matrix.CreateRotationX(0.01f);
+                world *= Matrix.CreateRotationY(-0.01f);
+            }
+            if (teclado.IsKeyDown(Keys.Up))
+            {
+                //(caixa.Meshes[0].Effects[0] as BasicEffect).World *= Matrix.CreateRotationX(0.01f);
+                world *= Matrix.CreateRotationX(0.01f);
+            }
+            if (teclado.IsKeyDown(Keys.Down))
+            {
+                //(caixa.Meshes[0].Effects[0] as BasicEffect).World *= Matrix.CreateRotationX(0.01f);
+                world *= Matrix.CreateRotationX(-0.01f);
+            }
+            #endregion
 
             atualizaCamera();
             base.Update(gameTime);
