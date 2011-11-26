@@ -37,3 +37,18 @@ C:\Users\devs173a\Desktop\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\obj\x86\Debug\Mapa
 C:\Users\devs173a\Desktop\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\moonGround.xnb
 C:\Users\devs173a\Desktop\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\quadrado.xnb
 C:\Users\devs173a\Desktop\MapaDeLuzes\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\Lua.xnb
+C:\Users\devs173a\Desktop\Lunar\Lunatic Lander\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\caixa.xnb
+C:\Users\devs173a\Desktop\Lunar\Lunatic Lander\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\plano.xnb
+C:\Users\devs173a\Desktop\Lunar\Lunatic Lander\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\chao.xnb
+C:\Users\devs173a\Desktop\Lunar\Lunatic Lander\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\mapadeluzes.xnb
+C:\Users\devs173a\Desktop\Lunar\Lunatic Lander\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\moonGround.xnb
+C:\Users\devs173a\Desktop\Lunar\Lunatic Lander\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\quadrado.xnb
+C:\Users\devs173a\Desktop\Lunar\Lunatic Lander\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\Lua.xnb
+C:\Users\devs173a\Desktop\Lunar\Lunatic Lander\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\video.xnb
+C:\Users\devs173a\Desktop\Lunar\Lunatic Lander\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\Content\video.wmv
+C:\Users\devs173a\Desktop\Lunar\Lunatic Lander\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\MapaDeLuzes.exe
+C:\Users\devs173a\Desktop\Lunar\Lunatic Lander\MapaDeLuzes\MapaDeLuzes\bin\x86\Debug\MapaDeLuzes.pdb
+C:\Users\devs173a\Desktop\Lunar\Lunatic Lander\MapaDeLuzes\MapaDeLuzes\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\devs173a\Desktop\Lunar\Lunatic Lander\MapaDeLuzes\MapaDeLuzes\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\devs173a\Desktop\Lunar\Lunatic Lander\MapaDeLuzes\MapaDeLuzes\obj\x86\Debug\MapaDeLuzes.exe
+C:\Users\devs173a\Desktop\Lunar\Lunatic Lander\MapaDeLuzes\MapaDeLuzes\obj\x86\Debug\MapaDeLuzes.pdb
