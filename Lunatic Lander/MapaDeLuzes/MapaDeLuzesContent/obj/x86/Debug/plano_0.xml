@@ -3,7 +3,7 @@
   <Asset Type="Graphics:MeshContent">
     <Name>Plane04</Name>
     <Identity>
-      <SourceFilename>C:\Users\devs173a\Desktop\MapaDeLuzes\MapaDeLuzes\MapaDeLuzesContent\plano.fbx</SourceFilename>
+      <SourceFilename>C:\Users\devs173a\Desktop\Lunar\Lunatic Lander\MapaDeLuzes\MapaDeLuzesContent\plano.fbx</SourceFilename>
       <SourceTool>FbxImporter</SourceTool>
     </Identity>
     <Transform>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</Transform>
@@ -27,7 +27,7 @@
     <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
       <Name>Material05</Name>
       <Identity>
-        <SourceFilename>C:\Users\devs173a\Desktop\MapaDeLuzes\MapaDeLuzes\MapaDeLuzesContent\plano.fbx</SourceFilename>
+        <SourceFilename>C:\Users\devs173a\Desktop\Lunar\Lunatic Lander\MapaDeLuzes\MapaDeLuzesContent\plano.fbx</SourceFilename>
         <SourceTool>FbxImporter</SourceTool>
       </Identity>
       <OpaqueData>
