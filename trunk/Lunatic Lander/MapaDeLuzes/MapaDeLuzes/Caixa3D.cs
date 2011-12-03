@@ -23,7 +23,6 @@ namespace Caixa3D
         Model caixa;
         Model plano;
         Texture2D textura;// não necessario...
-        BasicEffect efeitoBasico;
         DualTextureEffect efeitoDuplo;
         Video video;
         VideoPlayer player;

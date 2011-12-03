@@ -7,3 +7,5 @@ Content\quadrado.xnb
 Content\Lua.xnb
 Content\video.xnb
 Content\video.wmv
+Content\Skybox\earth.xnb
+Content\Skybox\Skydome.xnb

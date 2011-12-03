@@ -21,11 +21,14 @@ namespace MapaDeLuzes
         DualTextureEffect efeitoDuplo;
         Texture2D textura, quadrado;
         Model plano, caixa;
+        
 
         Vector3 posMundo, posCamera, posCaixa, posCamera2;
-        Matrix view, projection, world;
+        public Matrix view, projection, world;
 
-        float gravidade, aceleracao;
+        Skybox skybox;
+
+        float gravidade, aceleracao, velocidade;
 
         public Game1()
         {
@@ -36,11 +39,15 @@ namespace MapaDeLuzes
        
         protected override void Initialize()
         {
+
+            skybox = new Skybox(this);
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
+
+
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             efeitoDuplo = new DualTextureEffect(GraphicsDevice);
@@ -74,6 +81,8 @@ namespace MapaDeLuzes
 
             aceleracao =0.01f;
             gravidade = 0.01f;
+            velocidade = 0;
+            skybox.Load();
         }
 
         public void atualizaCamera()
@@ -100,7 +109,7 @@ namespace MapaDeLuzes
 
             teclado = Keyboard.GetState();
             
-            posCaixa.Y += aceleracao;
+            posCaixa.Y += velocidade;
 
             #region TecladoInput
 
@@ -109,6 +118,8 @@ namespace MapaDeLuzes
             if (teclado.IsKeyDown(Keys.W))
             {
                 aceleracao *= 1.01f;
+                velocidade = aceleracao;
+                gravidade = 0.01f;
             }
 
             if (teclado.IsKeyDown(Keys.A))
@@ -140,16 +151,24 @@ namespace MapaDeLuzes
             }
             #endregion
 
-
+            
             #region contato com o chão
                  if ((posCaixa.Y > 0) && (teclado.IsKeyUp(Keys.W))) 
                     {
                         gravidade *= 1.01f;
+                        aceleracao = 0.01f;
                         posCaixa.Y -= gravidade;
+                        if (velocidade > 0)
+                        {
+                            velocidade -= 0.001f;
+                        }
+                        if (velocidade < 0)
+                        { velocidade = 0; }
                     }
             #endregion
 
             atualizaCamera();
+            skybox.Update(gameTime);
             base.Update(gameTime);
         }
 
@@ -163,6 +182,7 @@ namespace MapaDeLuzes
             caixa.Draw(Matrix.CreateTranslation(posCaixa), view, projection);
             DrawModel(plano, world, efeitoDuplo);
 
+            skybox.Draw(gameTime);
             base.Draw(gameTime);
         }
 

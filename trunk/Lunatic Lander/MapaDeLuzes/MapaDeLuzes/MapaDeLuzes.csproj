@@ -112,6 +112,7 @@
     <Compile Include="Lunar Lander 3D.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Skybox.cs" />
     <Compile Include="Wolrd.cs" />
   </ItemGroup>
   <ItemGroup>
