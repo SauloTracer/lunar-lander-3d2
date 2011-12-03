@@ -2,3 +2,4 @@ C:\Users\devs173a\Documents\Visual Studio 2010\Projects\MapaDeLuzes\MapaDeLuzes\
 D:\MapaDeLuzes\MapaDeLuzes\MapaDeLuzesContent\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\devs173a\Desktop\MapaDeLuzes\MapaDeLuzes\MapaDeLuzesContent\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\devs173a\Desktop\Lunar\Lunatic Lander\MapaDeLuzes\MapaDeLuzesContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\devs173a\Desktop\Lunar Lander\Lunatic Lander\MapaDeLuzes\MapaDeLuzesContent\obj\x86\Debug\ResolveAssemblyReference.cache
